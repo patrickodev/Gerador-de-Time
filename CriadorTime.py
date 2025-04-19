@@ -41,8 +41,8 @@ def media_por_time(time):
 
 # Função para plotar o gráfico radar de cada time
 def plotar_radar(times, frame):
-    atributos = ['Velocidade', 'Ataque', 'Defesa', 'Stamina']
-    fig, axs = plt.subplots(1, 3, subplot_kw={'polar': True}, figsize=(9, 3))
+    atributos = ['Vel', 'Ata', 'Def', 'Sta']
+    fig, axs = plt.subplots(1, 3, subplot_kw={'polar': True}, figsize=(18, 3))
     angulos = np.linspace(0, 2 * np.pi, len(atributos), endpoint=False).tolist()
     atributos_completo = atributos + [atributos[0]]
     angulos_completo = angulos + [angulos[0]]
@@ -66,6 +66,7 @@ def plotar_radar(times, frame):
     canvas.get_tk_widget().pack(pady=10)
 
     plt.close(fig)  # evita gráficos duplicados
+
 
 
 # Função chamada ao clicar em "Carregar CSV"
